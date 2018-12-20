@@ -23,7 +23,7 @@ Open your WordPress themes **functions.php** file  `/wp-content/your-theme/funct
 
 
 		// Register Custom Navigation Walker
-		require_once('wp_bootstrap4-mega-navwalker.php');
+		require_once('wp-bootstrap-mega-navwalker.php');
 
 
 Usage
@@ -36,7 +36,7 @@ Update your `wp_nav_menu()` function in `header.php` to use the new walker by ad
 		  'theme_location' => 'mega_menu',
 		  'depth' => 0,
 		  'menu_class'  => 'navbar-nav mr-auto',
-		  'walker'  => new BootstrapNavMenuWalker()
+		  'walker'  => new WP_Bootstrap_Mega_Navwalker()
           );
     wp_nav_menu($args);
         ?>
@@ -97,7 +97,7 @@ Typically the menu is wrapped with additional markup, here is an example of a ` 
             'depth' => 0,
             'container' => '',
             'menu_class'  => 'navbar-nav mr-auto',
-            'walker'  => new BootstrapNavMenuWalker()
+            'walker'  => new WP_Bootstrap_Mega_Navwalker()
             );
           wp_nav_menu($args);
           ?>
